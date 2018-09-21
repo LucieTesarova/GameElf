@@ -3,6 +3,9 @@
     <string name="vitejvehre">Vitej ve hre !</string>
     <string name="buttonhra">Zacit hrat</string>
     <string name="buttonkonec">Konec</string>
-    <string name="buttonponec">-></string>
-    <string name="test">ttesttesttesttesttesttesttesttesttesttestvest</string>
+    <string name="buttonpokracuj">-></string>
+    <string name="test">Pujdes do lesa?</string>
+    <string name="ne">Ne</string>
+    <string name="ano">Ano</string>
+    <string name="buttonpotvrdit">-></string>
 </resources>

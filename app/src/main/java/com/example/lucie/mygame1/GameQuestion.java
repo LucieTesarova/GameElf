@@ -1,6 +1,7 @@
 package com.example.lucie.mygame1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,8 @@ public class GameQuestion extends Activity {
         pokracuj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                otazka.setText("anoo");
+                Intent intent = new Intent(getApplicationContext(), GameResponse.class);
+                startActivity(intent);
             }
         });
 
