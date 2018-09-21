@@ -21,8 +21,8 @@ public class MainActivity extends Activity {
         hrat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), HraActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), GameQuestion.class);
+                startActivity(intent);
             }
         });
 
