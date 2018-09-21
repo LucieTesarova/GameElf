@@ -9,6 +9,6 @@ public class GameQuestion extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.gameQuestion);
+        setContentView(R.layout.gamequestion);
     }
 }
