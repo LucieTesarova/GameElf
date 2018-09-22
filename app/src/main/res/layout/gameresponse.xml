@@ -18,14 +18,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="false"
-        android:text="@string/ano" />
+        android:text="@string/ano"
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
         android:id="@+id/radiobuttonne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="false"
-        android:text="@string/ne" />
+        android:text="@string/ne"
+        android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
     <Button
