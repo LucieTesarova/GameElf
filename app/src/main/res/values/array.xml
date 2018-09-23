@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_array">
+
+        <item>hlavnitext</item>
+        <item>odpovedAA</item>
+        <item>odpovedBB</item>
+        <item>odkazA</item>
+        <item>odkazB</item>
+
+    </string-array>
+</resources>
