@@ -45,7 +45,7 @@ public class GameResponse extends Activity {
     }
 
     public void save(View v) {
-        String result = dm.getItems();
-        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+        int result = dm.getItem(4);
+        Toast.makeText(getApplicationContext(), String.valueOf(result), Toast.LENGTH_LONG).show();
     }
 }

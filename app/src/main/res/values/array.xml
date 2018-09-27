@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="my_array">
+    <string-array name="my_array1">
+        <item>Probudil ses v lese, co uděláš?</item>
+        <item>Začnu volat o pomoc</item>
+        <item>Vydám se na cestu</item>
+        <item>Nikdo tě neslyší !</item>
+        <item>2</item>
+    </string-array>
 
-        <item>hlavnitext</item>
-        <item>odpovedAA</item>
-        <item>odpovedBB</item>
-        <item>odkazA</item>
-        <item>odkazB</item>
+    <string-array name="my_array2">
+        <item>Potkal si skřítka Emílka, pomůžeš mu najít ztracenou ženu?</item>
+        <item>Ano</item>
+        <item>Ne</item>
+        <item>3</item>
+        <item>OOdkazB</item>
+    </string-array>
 
+    <string-array name="my_array3">
+        <item>Nastražil na tebe past, spadnul si do jámy</item>
+        <item>Poprosím ho o milost</item>
+        <item>Rozbrečím se</item>
+        <item>OdkazA</item>
+        <item>4</item>
+    </string-array>
+
+
+    <string-array name="my_array4">
+        <item>V noci tě přijde vysvobodit liška, hodí ti lano</item>
+        <item>Vylezu po laně</item>
+        <item>Nevylezu po něm</item>
+        <item>Skřítek tě další den zabil</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string-array name="my_array5">
+        <item>Co dál?</item>
+        <item>S liškou se skamarádíš</item>
+        <item>Poděkuješ lišce a rozloučíš se</item>
+        <item>OdkazA</item>
+        <item>OOdkazB</item>
     </string-array>
 </resources>
