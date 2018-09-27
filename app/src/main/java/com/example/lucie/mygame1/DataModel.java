@@ -111,20 +111,22 @@ public class DataModel extends SQLiteOpenHelper {
 //        return id;
 //    }
 
-    public Integer getItem(int id) {
+    public Item getItem(int id) {
         String sSql = "SELECT * FROM " + DB_TABULKA;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(sSql, null);
+        Item item;
         int result;
 
         if (cursor.moveToFirst()) {
             do {
                 result = cursor.getInt(0);
                 if (result == id){
-                    return result;
+                    item = new Item(id, cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
+                    return item;
                 }
             } while (cursor.moveToNext());
         }
-        return -1;
+        return null;
     }
 }
