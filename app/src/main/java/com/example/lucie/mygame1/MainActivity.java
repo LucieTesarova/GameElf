@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/*
+ Trida MainActivity
+ Spousti aplikaci, zobrazuje uvodni rozcestnik hry
+ */
 public class MainActivity extends Activity {
 
     private Button hrat;

@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/*
+ Trida GameQuestion
+ Slouzi k zobrazeni otazky
+ */
 public class GameQuestion extends Activity {
 
     private TextView otazka;

@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+/*
+ Trida GameResponse
+ Slouzi k zaznamenani odpovedi
+ */
 public class GameResponse extends Activity {
 
     private RadioButton ano;

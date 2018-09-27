@@ -1,5 +1,9 @@
 package com.example.lucie.mygame1;
 
+/*
+ Trida Item
+ Slouzi k vytvoreni objektu databaze
+ */
 public class Item {
 
     private int id;

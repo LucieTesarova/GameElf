@@ -6,8 +6,11 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.TypedValue;
 
+/*
+ Trida Datamodel
+ Umoznuje vytvoreni databaze a praci s daty
+ */
 public class DataModel extends SQLiteOpenHelper {
 
     private static final String DB_DATABAZE = "databaze";
