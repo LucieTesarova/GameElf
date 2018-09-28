@@ -27,6 +27,9 @@ public class GameQuestion extends Activity {
 
         otazka = findViewById(R.id.otazka);
         pokracuj = findViewById(R.id.buttonPokracuj);
+        Item item = dm.getItem(1);
+        otazka.setText(item.getHlavniText());
+
         pokracuj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,9 +38,6 @@ public class GameQuestion extends Activity {
                 startActivityForResult(intent, REQUEST);
             }
         });
-
-        Item item = dm.getItem(1);
-        otazka.setText(item.getHlavniText());
     }
 
     @Override
@@ -46,12 +46,19 @@ public class GameQuestion extends Activity {
         if (requestCode == REQUEST) {
             if(resultCode == Activity.RESULT_OK){
                 String result = data.getStringExtra("odkaz");
-                Toast.makeText(this, "vysledek " + result, Toast.LENGTH_LONG).show();
+                setText(result);
+               // Toast.makeText(this, "vysledek " + result, Toast.LENGTH_LONG).show();
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
                 Toast.makeText(this, "chyba", Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    public void setText(String text){
+        Item item = dm.getItem(Integer.parseInt(text));
+        id = item.getId();
+        otazka.setText(item.getHlavniText());
     }
 }
