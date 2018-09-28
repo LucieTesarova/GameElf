@@ -65,7 +65,26 @@ public class GameResponse extends Activity {
     }
 
     public void save (View v) {
-        Toast.makeText(getApplicationContext(), "ulozeno", Toast.LENGTH_LONG).show();
+        boolean b = checkFormat(odkaz);
+        Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
+        if (!b){
+            openDisplayResponse();
+        }
         returnActivity(odkaz);
+    }
+
+    public boolean checkFormat(String odkaz){
+        try {
+          Integer.valueOf(odkaz);
+          return true;
+        }catch (NumberFormatException ex){
+            return false;
+        }
+    }
+
+    public void openDisplayResponse(){
+        Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
+        intent.putExtra("odkaz", odkaz);
+        startActivity(intent);
     }
 }
