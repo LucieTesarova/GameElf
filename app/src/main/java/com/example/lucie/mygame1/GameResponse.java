@@ -28,7 +28,7 @@ public class GameResponse extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameresponse);
-        //  dm.deleteTable();
+       // dm.deleteTable();
 
         ano = findViewById(R.id.radiobuttonano);
         ne = findViewById(R.id.radiobuttonne);

@@ -9,18 +9,18 @@
     </string-array>
 
     <string-array name="my_array2">
-        <item>Potkal si skřítka Emílka, pomůžeš mu najít ztracenou ženu?</item>
+        <item>Potkal jsi skřítka Emílka, pomůžeš mu najít ztracenou ženu?</item>
         <item>Ano</item>
         <item>Ne</item>
         <item>3</item>
-        <item>OOdkazB</item>
+        <item>13</item>
     </string-array>
 
     <string-array name="my_array3">
-        <item>Nastražil na tebe past, spadnul si do jámy</item>
+        <item>Nastražil na tebe past, spadnul jsi do jámy</item>
         <item>Poprosím ho o milost</item>
         <item>Rozbrečím se</item>
-        <item>OdkazA</item>
+        <item>Vysměje se ti</item>
         <item>4</item>
     </string-array>
 
@@ -29,8 +29,8 @@
         <item>V noci tě přijde vysvobodit liška, hodí ti lano</item>
         <item>Vylezu po laně</item>
         <item>Nevylezu po něm</item>
-        <item>Skřítek tě další den zabil</item>
         <item>5</item>
+        <item>Skřítek tě další den zabil</item>
     </string-array>
 
 
@@ -38,7 +38,130 @@
         <item>Co dál?</item>
         <item>S liškou se skamarádíš</item>
         <item>Poděkuješ lišce a rozloučíš se</item>
-        <item>OdkazA</item>
-        <item>OOdkazB</item>
+        <item>19</item>
+        <item>6</item>
     </string-array>
+
+    <string-array name="my_array6">
+        <item>Narazil jsi na keřík s fialovými bobulkami, ochutnáš je?</item>
+        <item>Ano</item>
+        <item>Ne</item>
+        <item>7</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="my_array7">
+        <item>Narostlo ti ne čele třetí oko. Toto oko ti umožní vidět lesní duchy.</item>
+        <item>Promluvíš si s malým modrým duchem.</item>
+        <item>Chceš se rychle někam schovat.</item>
+        <item>8</item>
+        <item>Vlezeš do starého dutého kmenu, kde žije smrtelně jedovatý pavouk - kousnul tě a umíráš!</item>
+    </string-array>
+
+    <string-array name="my_array8">
+        <item>Poradí ti kudy se máš vydat.</item>
+        <item>Poslechnu ho.</item>
+        <item>Nevěříš mu.</item>
+        <item>9</item>
+        <item>Duch se naštve a zakleje tě - stane se z tebe taky duch! Budeš v lese bloudit do konce světa!</item>
+    </string-array>
+
+    <string-array name="my_array9">
+        <item>Dojdeš k dřevěné chaloupce na okraji lesa, nakoukneš do okna a uvidíš nádhernou dívku.</item>
+        <item>Půjdu dovnitř chaloupky.</item>
+        <item>Vydám se z lesa ven.</item>
+        <item>Zamilovali jste se do sebe a měli jste kupu tříokých dětí.</item>
+        <item>Vyhrál jsi, našel jsi cestu do civilizace.</item>
+    </string-array>
+
+
+
+
+
+    <string-array name="my_array10">
+        <item>Další den přišla strašná bouře. Jsi celý promočený a vyčerpaný.</item>
+        <item>Pokusíš se rozdělat oheň.</item>
+        <item>Chceš najít nějaký úkryt.</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+
+    <string-array name="my_array11">
+        <item>Nedaří se ti to a pomalu promrzáš.</item>
+        <item>Pokoušíš se o to dál.</item>
+        <item>Začneš běhat aby ses trochu zahřál.</item>
+        <item>Najednou se začneš vznášet - unáší tě mimozemšťané se slovy: "Už jsme se na to nemohli dál dívat" !</item>
+        <item>Najednou se začneš vznášet - unáší tě mimozemšťané se slovy: "Už jsme se na to nemohli dál dívat" !</item>
+    </string-array>
+
+
+    <string-array name="my_array12">
+        <item>Spadnul jsi do bažiny!</item>
+        <item>Začneš volat o pomoc.</item>
+        <item>Snažís se rychle chytit nějaké větve.</item>
+        <item>Najednou se začneš vznášet - unáší tě mimozemšťané se slovy: "Už jsme se na to nemohli dál dívat" !</item>
+        <item>Najednou se začneš vznášet - unáší tě mimozemšťané se slovy: "Už jsme se na to nemohli dál dívat" !</item>
+    </string-array>
+
+
+    <string-array name="my_array13">
+        <item>Došel jsi k jezeru.</item>
+        <item>Obejdeš ho.</item>
+        <item>Přepluješ ho na loďce.</item>
+        <item>14</item>
+        <item>17</item>
+    </string-array>
+
+
+    <string-array name="my_array14">
+        <item>V dálce mezi stromy zahlédneš slabé zelené světýlko.</item>
+        <item>Půjdeš se podívat blíž.</item>
+        <item>Dáš se opačným směrem.</item>
+        <item>15</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="my_array15">
+        <item>Světlo sílí, najednou tě někdo popadne, nic si nepamatuješ, ocitl ses v kosmické lodi.</item>
+        <item>Bojíš se, snažíš se vymyslet jak utéct.</item>
+        <item>Zeptáš se mimozemšťanů: "Co tady dělám?, Kdo jste? , Kdo jsem já?".</item>
+        <item>16</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="my_array16">
+        <item>Jeden z nich říká: "Hele kámo, chtěl jsi přece po nás, ať tě sem odvezem, přál sis nový život na nové planetě, zpět tě vzít nemůžeme!</item>
+        <item>Poprosíš je tedy, ať tě pustí a slíbíš, že už se navrátíš.</item>
+        <item>Rozbrečíš se a začneš panikařit.</item>
+        <item>Najednou se ocitneš v lese na vysoké skále, z vrcholku zahlédneš konec lesa...vydáš se do civilizace!</item>
+        <item>Odkaz.</item>
+    </string-array>
+
+
+    <string-array name="my_array17">
+        <item>Objevila se vodní příšera!</item>
+        <item>Začneš hlasitě zpívat ukolébavku.</item>
+        <item>Udeříš ji pádlem.</item>
+        <item>18</item>
+        <item>Rozzuřila se a zabila tě!</item>
+    </string-array>
+
+
+    <string-array name="my_array18">
+        <item>Příšera se na tebe divně podívá a odplave pryč.</item>
+        <item>Pluješ co nejrychleji k nejbližšímu břehu.</item>
+        <item>Dopluješ na protější břeh.</item>
+        <item>14</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="my_array19">
+        <item>Liška tě zavede ke staré chatě, kde zlý stařec vězní celou její rodinu.</item>
+        <item>Najdeš velký kámen a ihned půjdeme s liškou starce napadnout.</item>
+        <item>Počkáte až se setmí a pokusíte se s lišoku vloupat dovnitř.</item>
+        <item>Starce zabijete, ale máš těžké zranění a nepřežiješ to. Liška ale svoji rodinu zachránila.</item>
+        <item>Osvobodíte všechny lišky a ty starce napadnout. Rozhodneš se, že zde i s liškami zůstaneš žít!</item>
+    </string-array>
+
 </resources>

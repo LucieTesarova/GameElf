@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataModel extends SQLiteOpenHelper {
 
     private static final String DB_DATABAZE = "databaze";
-    private static final int DB_VERZE = 1;
+    private static final int DB_VERZE = 3;
     private static final String DB_TABULKA = "tabulka";
     private final Context dbcontext;
 
@@ -48,11 +48,40 @@ public class DataModel extends SQLiteOpenHelper {
         String[] array3 = res.getStringArray(R.array.my_array3);
         String[] array4 = res.getStringArray(R.array.my_array4);
         String[] array5 = res.getStringArray(R.array.my_array5);
+        String[] array6 = res.getStringArray(R.array.my_array6);
+        String[] array7 = res.getStringArray(R.array.my_array7);
+        String[] array8 = res.getStringArray(R.array.my_array8);
+        String[] array9 = res.getStringArray(R.array.my_array9);
+        String[] array10 = res.getStringArray(R.array.my_array10);
+        String[] array11 = res.getStringArray(R.array.my_array11);
+        String[] array12 = res.getStringArray(R.array.my_array12);
+        String[] array13 = res.getStringArray(R.array.my_array13);
+        String[] array14 = res.getStringArray(R.array.my_array14);
+        String[] array15 = res.getStringArray(R.array.my_array15);
+        String[] array16 = res.getStringArray(R.array.my_array16);
+        String[] array17 = res.getStringArray(R.array.my_array17);
+        String[] array18 = res.getStringArray(R.array.my_array18);
+        String[] array19 = res.getStringArray(R.array.my_array19);
+
         zapisData(array, db);
         zapisData(array2, db);
         zapisData(array3, db);
         zapisData(array4, db);
         zapisData(array5, db);
+        zapisData(array6, db);
+        zapisData(array7, db);
+        zapisData(array8, db);
+        zapisData(array9, db);
+        zapisData(array10, db);
+        zapisData(array11, db);
+        zapisData(array12, db);
+        zapisData(array13, db);
+        zapisData(array14, db);
+        zapisData(array15, db);
+        zapisData(array16, db);
+        zapisData(array17, db);
+        zapisData(array18, db);
+        zapisData(array19, db);
 
 // 2.moznost
 //        String sInsert = "INSERT INTO " + DB_TABULKA + " ("
@@ -126,10 +155,12 @@ public class DataModel extends SQLiteOpenHelper {
                 result = cursor.getInt(0);
                 if (result == id){
                     item = new Item(id, cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
+                    db.close();
                     return item;
                 }
             } while (cursor.moveToNext());
         }
+        db.close();
         return null;
     }
 }
