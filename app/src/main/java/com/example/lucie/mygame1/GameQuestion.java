@@ -3,6 +3,7 @@ package com.example.lucie.mygame1;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class GameQuestion extends Activity {
     private int id = 1;
     static final int REQUEST = 1;
     DataModel dm = new DataModel(this);
+    private boolean continueMusic = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +49,8 @@ public class GameQuestion extends Activity {
             if(resultCode == Activity.RESULT_OK){
                 String result = data.getStringExtra("odkaz");
                 setText(result);
-               // Toast.makeText(this, "vysledek " + result, Toast.LENGTH_LONG).show();
             }
             if (resultCode == Activity.RESULT_CANCELED) {
-                //Write your code if there's no result
                 Toast.makeText(this, "chyba", Toast.LENGTH_LONG).show();
             }
         }
@@ -60,5 +60,27 @@ public class GameQuestion extends Activity {
         Item item = dm.getItem(Integer.parseInt(text));
         id = item.getId();
         otazka.setText(item.getHlavniText());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (!continueMusic) {
+            BackgroundSound.pause();
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        continueMusic = false;
+        BackgroundSound.start(this);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        int i = event.getKeyCode();
+        if (i == event.KEYCODE_BACK) {
+            continueMusic = false;
+        }
+        return true;
     }
 }

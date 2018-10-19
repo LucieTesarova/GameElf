@@ -2,10 +2,12 @@ package com.example.lucie.mygame1;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+
+import java.io.IOException;
 
 /*
  Trida MainActivity
@@ -15,11 +17,14 @@ public class MainActivity extends Activity {
 
     private Button hrat;
     private Button konec;
+    private boolean continueMusic = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        BackgroundSound.create(this);
 
         hrat = findViewById(R.id.buttonHrat);
         hrat.setOnClickListener(new View.OnClickListener() {
@@ -38,4 +43,19 @@ public class MainActivity extends Activity {
             }
         });
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (!continueMusic) {
+            BackgroundSound.pause();
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        continueMusic = false;
+        BackgroundSound.start(this);
+    }
+
 }

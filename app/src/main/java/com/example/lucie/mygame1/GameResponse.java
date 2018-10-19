@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -22,6 +23,7 @@ public class GameResponse extends Activity {
     private Item item;
     private Intent returnIntent;
     private String odkaz;
+    private boolean continueMusic = true;
     DataModel dm = new DataModel(this);
 
     @Override
@@ -86,5 +88,27 @@ public class GameResponse extends Activity {
         Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
         intent.putExtra("odkaz", odkaz);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (!continueMusic) {
+            BackgroundSound.pause();
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        continueMusic = false;
+        BackgroundSound.start(this);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        int i = event.getKeyCode();
+        if (i == event.KEYCODE_BACK) {
+            continueMusic = false;
+        }
+        return true;
     }
 }
