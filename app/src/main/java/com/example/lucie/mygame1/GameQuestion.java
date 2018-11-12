@@ -73,7 +73,7 @@ public class GameQuestion extends Activity {
     protected void onResume() {
         super.onResume();
         continueMusic = false;
-        BackgroundSound.start(this);
+        BackgroundSound.start();
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

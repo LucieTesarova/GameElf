@@ -6,8 +6,10 @@ import android.media.MediaPlayer;
 public class BackgroundSound {
 
     private static MediaPlayer player;
+    private static Context con;
 
     public static void create(Context context) {
+        con = context;
         player = MediaPlayer.create(context, R.raw.music);
         player.setLooping(true);
         if (!player.isPlaying()) {
@@ -15,24 +17,36 @@ public class BackgroundSound {
         }
     }
 
-    public static void start(Context context) {
-        if (!player.isPlaying()) {
-            player.start();
+    public static void start() {
+        if (player != null) {
+            if (!player.isPlaying()) {
+                player.start();
+            }
         }
     }
 
 
     public static void pause() {
-        if (player.isPlaying()) {
-            player.pause();
+        if (player != null) {
+            if (player.isPlaying()) {
+                player.pause();
+            }
         }
     }
 
-    public static void release() {
-        if (player.isPlaying()) {
-            player.stop();
+    public static void turnOffMusic() {
+        if (player != null) {
+            if (player.isPlaying()) {
+                player.stop();
+                player = null;
+            }
         }
-        player.release();
+    }
+
+    public static void turnOnMusic() {
+        if (player == null) {
+            create(con);
+        }
     }
 }
 

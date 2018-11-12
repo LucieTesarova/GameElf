@@ -45,7 +45,7 @@ public class DisplayResponse extends Activity {
     protected void onResume() {
         super.onResume();
         continueMusic = false;
-        BackgroundSound.start(this);
+        BackgroundSound.start();
     }
 
     @Override

@@ -20,7 +20,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonhra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/buttonNastaveni"/>
+
+    <Button
+        android:id="@+id/buttonNastaveni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonnastaveni"
         android:layout_centerInParent="true"/>
+
 
     <Button
         android:id="@+id/buttonKonec"
@@ -28,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/buttonHrat"
+        android:layout_below="@id/buttonNastaveni"
         android:text="@string/buttonkonec"/>
 
 </RelativeLayout>
