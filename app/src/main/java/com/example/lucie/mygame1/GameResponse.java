@@ -1,10 +1,15 @@
 package com.example.lucie.mygame1;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -14,7 +19,7 @@ import android.widget.Toast;
  Trida GameResponse
  Slouzi k zaznamenani odpovedi
  */
-public class GameResponse extends Activity {
+public class GameResponse extends AppCompatActivity {
 
     private RadioButton ano;
     private RadioButton ne;
@@ -30,7 +35,9 @@ public class GameResponse extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameresponse);
-       // dm.deleteTable();
+        // dm.deleteTable();
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
+        setSupportActionBar(myToolbar);
 
         ano = findViewById(R.id.radiobuttonano);
         ne = findViewById(R.id.radiobuttonne);
@@ -60,31 +67,31 @@ public class GameResponse extends Activity {
         }
     }
 
-    public void returnActivity(String odkaz){
-        returnIntent.putExtra("odkaz",odkaz);
-        setResult(Activity.RESULT_OK,returnIntent);
+    public void returnActivity(String odkaz) {
+        returnIntent.putExtra("odkaz", odkaz);
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 
-    public void save (View v) {
+    public void save(View v) {
         boolean b = checkFormat(odkaz);
         Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
-        if (!b){
+        if (!b) {
             openDisplayResponse();
         }
         returnActivity(odkaz);
     }
 
-    public boolean checkFormat(String odkaz){
+    public boolean checkFormat(String odkaz) {
         try {
-          Integer.valueOf(odkaz);
-          return true;
-        }catch (NumberFormatException ex){
+            Integer.valueOf(odkaz);
+            return true;
+        } catch (NumberFormatException ex) {
             return false;
         }
     }
 
-    public void openDisplayResponse(){
+    public void openDisplayResponse() {
         Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
         intent.putExtra("odkaz", odkaz);
         startActivity(intent);
@@ -97,12 +104,14 @@ public class GameResponse extends Activity {
             BackgroundSound.pause();
         }
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         continueMusic = false;
         BackgroundSound.start();
     }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         int i = event.getKeyCode();
@@ -110,5 +119,12 @@ public class GameResponse extends Activity {
             continueMusic = false;
         }
         return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
