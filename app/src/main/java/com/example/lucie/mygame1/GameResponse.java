@@ -140,7 +140,7 @@ public class GameResponse extends AppCompatActivity {
                 Toast.makeText(this,"setting", Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_endgame:
-                System.exit(1);
+                this.finishAffinity();
                 break;
             case android.R.id.home:
                 finish();

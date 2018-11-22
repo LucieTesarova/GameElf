@@ -80,7 +80,7 @@ public class DisplayResponse extends AppCompatActivity {
                 Toast.makeText(this,"setting", Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_endgame:
-                System.exit(1);
+                this.finishAffinity();
                 break;
             default:
         }
