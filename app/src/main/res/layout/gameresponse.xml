@@ -5,6 +5,11 @@
     android:background="@drawable/background"
     android:orientation="vertical">
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appbar">
+    </include>
+
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="wrap_content"

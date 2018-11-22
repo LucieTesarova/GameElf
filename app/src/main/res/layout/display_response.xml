@@ -5,6 +5,11 @@
     android:background="@drawable/background"
     android:orientation="vertical">
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appbar">
+    </include>
+
     <TextView
         android:id="@+id/response"
         android:layout_width="wrap_content"

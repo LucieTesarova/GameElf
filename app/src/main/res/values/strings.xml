@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyGame1</string>
+    <string name="app_name">Najdi spravnou cestu...</string>
     <string name="vitejvehre">Vitej ve hre !</string>
     <string name="buttonhra">Zacit hrat</string>
     <string name="buttonkonec">Konec</string>
@@ -9,5 +9,7 @@
     <string name="ano">Ano</string>
     <string name="buttonpotvrdit">-></string>
     <string name="buttonnastaveni">Nastaveni</string>
+    <string name="settings_name">Nastaveni</string>
+    <string name="endgame_name">Konec hry</string>
 
 </resources>

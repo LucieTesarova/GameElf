@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -38,6 +39,10 @@ public class GameResponse extends AppCompatActivity {
         // dm.deleteTable();
         Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayShowHomeEnabled(true);
+
 
         ano = findViewById(R.id.radiobuttonano);
         ne = findViewById(R.id.radiobuttonne);
@@ -127,4 +132,21 @@ public class GameResponse extends AppCompatActivity {
         inflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_settings:
+                Toast.makeText(this,"setting", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.action_endgame:
+                System.exit(1);
+                break;
+            case android.R.id.home:
+                finish();
+            default:
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
