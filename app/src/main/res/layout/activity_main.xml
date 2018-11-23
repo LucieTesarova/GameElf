@@ -10,35 +10,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:text="@string/vitejvehre"
-        android:textSize="20sp"
+        android:textColor="@color/colorgrey"
+        android:textSize="40sp"
         />
 
     <Button
         android:id="@+id/buttonHrat"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/buttonhra"
+        android:textColor="@color/coloryellow"
+        android:textSize="15dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/buttonNastaveni"/>
+        android:layout_marginBottom="10sp"
+        android:layout_above="@id/buttonNastaveni"
+        android:background="@drawable/button_shape_main" />
 
     <Button
         android:id="@+id/buttonNastaveni"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/buttonnastaveni"
-        android:layout_centerInParent="true"/>
+        android:textColor="@color/coloryellow"
+        android:textSize="15sp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_shape_main" />
 
 
     <Button
         android:id="@+id/buttonKonec"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@id/buttonNastaveni"
-        android:text="@string/buttonkonec"/>
+        android:text="@string/buttonkonec"
+        android:textColor="@color/coloryellow"
+        android:textSize="15sp"
+        android:background="@drawable/button_shape_main" />
 
 </RelativeLayout>

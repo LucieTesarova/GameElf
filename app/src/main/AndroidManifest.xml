@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lucie.mygame1">
 
-
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
@@ -14,10 +13,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameQuestion"></activity>
+        <activity android:name=".GameQuestion" />
         <activity android:name=".GameResponse" />
         <activity android:name=".DisplayResponse" />
-
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

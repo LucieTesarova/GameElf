@@ -137,7 +137,8 @@ public class GameResponse extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
-                Toast.makeText(this,"setting", Toast.LENGTH_LONG).show();
+                SoundDialogFragment dialog = new SoundDialogFragment();
+                dialog.show(getSupportFragmentManager(), "dialog");
                 break;
             case R.id.action_endgame:
                 this.finishAffinity();
