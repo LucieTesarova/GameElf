@@ -47,6 +47,7 @@ public class GameResponse extends AppCompatActivity {
         ano = findViewById(R.id.radiobuttonano);
         ne = findViewById(R.id.radiobuttonne);
         potvrdit = findViewById(R.id.potvrdit);
+        odkaz = "0";
 
         returnIntent = getIntent();
         id = returnIntent.getIntExtra("id", 0);
@@ -79,12 +80,17 @@ public class GameResponse extends AppCompatActivity {
     }
 
     public void save(View v) {
-        boolean b = checkFormat(odkaz);
-        Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
-        if (!b) {
-            openDisplayResponse();
+        if (odkaz.equals("0")){
+            Toast.makeText(getApplicationContext(), "Vyber jednu možnost !", Toast.LENGTH_LONG).show();
         }
-        returnActivity(odkaz);
+        else {
+            boolean b = checkFormat(odkaz);
+            Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
+            if (!b) {
+                openDisplayResponse();
+            }
+            returnActivity(odkaz);
+        }
     }
 
     public boolean checkFormat(String odkaz) {
@@ -99,6 +105,7 @@ public class GameResponse extends AppCompatActivity {
     public void openDisplayResponse() {
         Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
         intent.putExtra("odkaz", odkaz);
+        intent.putExtra("id", ++id);
         startActivity(intent);
     }
 
@@ -135,7 +142,7 @@ public class GameResponse extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_settings:
                 SoundDialogFragment dialog = new SoundDialogFragment();
                 dialog.show(getSupportFragmentManager(), "dialog");
@@ -149,5 +156,4 @@ public class GameResponse extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

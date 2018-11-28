@@ -38,6 +38,13 @@ public class GameQuestion extends AppCompatActivity {
         pokracuj = findViewById(R.id.buttonPokracuj);
         Item item = dm.getItem(1);
         otazka.setText(item.getHlavniText());
+        Intent i = getIntent();
+        if (i.hasExtra("id")){
+            id = i.getIntExtra("id", 0);
+            String newId = String.valueOf(id);
+            setText(newId);
+            Toast.makeText(getApplicationContext(), "id doruceno", Toast.LENGTH_LONG).show();
+        }
 
         pokracuj.setOnClickListener(new View.OnClickListener() {
             @Override

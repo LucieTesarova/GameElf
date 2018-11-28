@@ -19,6 +19,7 @@ public class DisplayResponse extends AppCompatActivity {
     private TextView textView;
     private Button button;
     private boolean continueMusic = true;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +34,15 @@ public class DisplayResponse extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GameQuestion.class);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
 
         Intent intent = getIntent();
         String response = intent.getStringExtra("odkaz");
+        id = intent.getIntExtra("id", 0);
+      //  Toast.makeText(getApplicationContext(), "id " + id, Toast.LENGTH_LONG).show();
         textView.setText(response);
     }
 
