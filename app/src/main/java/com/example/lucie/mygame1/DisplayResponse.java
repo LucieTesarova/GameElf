@@ -20,6 +20,7 @@ public class DisplayResponse extends AppCompatActivity {
     private Button button;
     private boolean continueMusic = true;
     private int id;
+    private String odkaz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +35,54 @@ public class DisplayResponse extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), GameQuestion.class);
-                intent.putExtra("id", id);
+                intent.putExtra("id", ++id);
                 startActivity(intent);
             }
         });
 
         Intent intent = getIntent();
-        String response = intent.getStringExtra("odkaz");
+        odkaz = intent.getStringExtra("odkaz");
         id = intent.getIntExtra("id", 0);
-      //  Toast.makeText(getApplicationContext(), "id " + id, Toast.LENGTH_LONG).show();
-        textView.setText(response);
+        //  Toast.makeText(getApplicationContext(), "id " + id, Toast.LENGTH_LONG).show();
+        textView.setText(odkaz);
+        checkId();
+    }
+
+    private void checkId() {
+        switch (id) {
+            case 1:
+                --id;
+                break;
+            case 4:
+            case 7:
+            case 8:
+            case 11:
+            case 12:
+            case 17:
+                openEndActivity("Prohral jsi !");
+               // Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
+                break;
+            case 9:
+            case 16:
+                openEndActivity("Vyhral jsi !");
+               // Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
+                break;
+            case 19:
+                if (odkaz.startsWith("s")) {
+                    openEndActivity("Prohral jsi !");
+                    //Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
+                } else {
+                    openEndActivity("Vyhral jsi !");
+                   // Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
+                }
+                break;
+        }
+    }
+
+    public void openEndActivity(String response){
+        Intent intent = new Intent(getApplicationContext(), EndActivity.class);
+        intent.putExtra("response", response);
+        startActivity(intent);
     }
 
     @Override
@@ -79,7 +118,7 @@ public class DisplayResponse extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_settings:
                 SoundDialogFragment dialog = new SoundDialogFragment();
                 dialog.show(getSupportFragmentManager(), "dialog");

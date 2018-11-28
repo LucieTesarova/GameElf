@@ -16,9 +16,7 @@
         <activity android:name=".GameQuestion" />
         <activity android:name=".GameResponse" />
         <activity android:name=".DisplayResponse" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".EndActivity"></activity>
     </application>
 
 </manifest>

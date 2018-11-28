@@ -36,7 +36,7 @@ public class GameResponse extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameresponse);
-        // dm.deleteTable();
+     //   dm.deleteTable();
         Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
@@ -105,7 +105,7 @@ public class GameResponse extends AppCompatActivity {
     public void openDisplayResponse() {
         Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
         intent.putExtra("odkaz", odkaz);
-        intent.putExtra("id", ++id);
+        intent.putExtra("id", id);
         startActivity(intent);
     }
 
