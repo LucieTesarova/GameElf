@@ -36,7 +36,7 @@ public class GameResponse extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameresponse);
-     //   dm.deleteTable();
+       // dm.deleteTable();
         Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
@@ -85,7 +85,7 @@ public class GameResponse extends AppCompatActivity {
         }
         else {
             boolean b = checkFormat(odkaz);
-            Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
+          //  Toast.makeText(getApplicationContext(), "boolean " + b, Toast.LENGTH_LONG).show();
             if (!b) {
                 openDisplayResponse();
             }
@@ -104,6 +104,7 @@ public class GameResponse extends AppCompatActivity {
 
     public void openDisplayResponse() {
         Intent intent = new Intent(getApplicationContext(), DisplayResponse.class);
+          Toast.makeText(getApplicationContext(), "Odkaz:  " + odkaz, Toast.LENGTH_LONG).show();
         intent.putExtra("odkaz", odkaz);
         intent.putExtra("id", id);
         startActivity(intent);

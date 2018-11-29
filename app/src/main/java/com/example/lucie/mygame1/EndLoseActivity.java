@@ -1,5 +1,6 @@
 package com.example.lucie.mygame1;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +12,15 @@ import android.widget.Toast;
 public class EndLoseActivity extends AppCompatActivity {
 
     private ImageView imageView;
+    private static MediaPlayer player;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_lose);
         imageView = findViewById(R.id.image_prohraljsi);
+        player = MediaPlayer.create(getApplicationContext(), R.raw.lose);
+        player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         Toast.makeText(getApplicationContext(), "Otevrena endLoseActivity", Toast.LENGTH_LONG).show();

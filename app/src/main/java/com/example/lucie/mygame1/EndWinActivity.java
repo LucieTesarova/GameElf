@@ -1,5 +1,6 @@
 package com.example.lucie.mygame1;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.AccelerateInterpolator;
@@ -18,11 +19,14 @@ public class EndWinActivity extends AppCompatActivity {
     private ImageView hvezda4;
     private ImageView hvezda5;
     private ImageView hvezda6;
+    private static MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_win);
+        player = MediaPlayer.create(getApplicationContext(), R.raw.tuudurt);
+        player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         imageVyhra = findViewById(R.id.image_vyhraljsi);
@@ -32,7 +36,6 @@ public class EndWinActivity extends AppCompatActivity {
         hvezda4 = findViewById(R.id.hvezda4);
         hvezda5 = findViewById(R.id.hvezda5);
         hvezda6 = findViewById(R.id.hvezda6);
-
 
         Toast.makeText(getApplicationContext(), "Otevrena endWinActivity", Toast.LENGTH_LONG).show();
     }
@@ -60,7 +63,7 @@ public class EndWinActivity extends AppCompatActivity {
                     .setInterpolator(new LinearInterpolator()).alpha(1.0f);
             hvezda6.animate().setDuration(1500)
                     .setInterpolator(new LinearInterpolator()).alpha(1.0f);
-            imageVyhra.animate().setDuration(2900)
+            imageVyhra.animate().setDuration(2700)
                     .setInterpolator(new LinearInterpolator()).alpha(1.0f)
                     .withEndAction(rotace);
         }
