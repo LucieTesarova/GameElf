@@ -6,9 +6,10 @@
     android:background="@color/colorgrey">
 
     <ImageView
+        android:id="@+id/image_prohraljsi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/prohral_jsi"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
