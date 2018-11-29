@@ -16,7 +16,8 @@
         <activity android:name=".GameQuestion" />
         <activity android:name=".GameResponse" />
         <activity android:name=".DisplayResponse" />
-        <activity android:name=".EndActivity"></activity>
+        <activity android:name=".EndWinActivity"></activity>
+        <activity android:name=".EndLoseActivity"></activity>
     </application>
 
 </manifest>

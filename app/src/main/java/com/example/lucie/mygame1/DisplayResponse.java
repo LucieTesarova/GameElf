@@ -1,6 +1,5 @@
 package com.example.lucie.mygame1;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,9 +33,11 @@ public class DisplayResponse extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GameQuestion.class);
-                intent.putExtra("id", ++id);
-                startActivity(intent);
+                if (!checkId()) {
+                    Intent intent = new Intent(getApplicationContext(), GameQuestion.class);
+                    intent.putExtra("id", ++id);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -45,10 +46,11 @@ public class DisplayResponse extends AppCompatActivity {
         id = intent.getIntExtra("id", 0);
         //  Toast.makeText(getApplicationContext(), "id " + id, Toast.LENGTH_LONG).show();
         textView.setText(odkaz);
-        checkId();
+
     }
 
-    private void checkId() {
+    private boolean checkId() {
+        boolean b = true;
         switch (id) {
             case 1:
                 --id;
@@ -59,29 +61,36 @@ public class DisplayResponse extends AppCompatActivity {
             case 11:
             case 12:
             case 17:
-                openEndActivity("Prohral jsi !");
-               // Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
+                openEndLoseActivity();
+                Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
                 break;
             case 9:
             case 16:
-                openEndActivity("Vyhral jsi !");
-               // Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
+                openEndWinActivity();
+                Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
                 break;
             case 19:
                 if (odkaz.startsWith("s")) {
-                    openEndActivity("Prohral jsi !");
-                    //Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
+                    openEndLoseActivity();
+                    Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
                 } else {
-                    openEndActivity("Vyhral jsi !");
-                   // Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
+                    openEndWinActivity();
+                    Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
                 }
                 break;
+            default:
+                b = false;
         }
+        return b;
     }
 
-    public void openEndActivity(String response){
-        Intent intent = new Intent(getApplicationContext(), EndActivity.class);
-        intent.putExtra("response", response);
+    public void openEndWinActivity() {
+        Intent intent = new Intent(getApplicationContext(), EndWinActivity.class);
+        startActivity(intent);
+    }
+
+    public void openEndLoseActivity() {
+        Intent intent = new Intent(getApplicationContext(), EndLoseActivity.class);
         startActivity(intent);
     }
 

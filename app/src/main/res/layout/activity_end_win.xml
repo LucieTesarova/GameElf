@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgreen">
+
+    <ImageView
+        android:id="@+id/image_vyhraljsi"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+       android:layout_centerInParent="true"
+        android:src="@drawable/vyhral_jsi" />
+
+    <ImageView
+        android:id="@+id/hvezda1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="-16dp"
+        android:layout_toStartOf="@+id/image_vyhraljsi"
+        android:src="@drawable/hvezda1" />
+
+    <ImageView
+        android:id="@+id/hvezda2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="83dp"
+        android:layout_toEndOf="@+id/image_vyhraljsi"
+        android:src="@drawable/hvezda2" />
+
+    <ImageView
+        android:id="@+id/hvezda3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hvezda4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="82dp"
+        android:src="@drawable/hvezda3" />
+
+    <ImageView
+        android:id="@+id/hvezda4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/image_vyhraljsi"
+        android:layout_alignStart="@+id/hvezda1"
+        android:src="@drawable/hvezda4" />
+
+    <ImageView
+        android:id="@+id/hvezda5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hvezda6"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/hvezda5" />
+
+
+    <ImageView
+        android:id="@+id/hvezda6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/hvezda6" />
+
+</RelativeLayout>
