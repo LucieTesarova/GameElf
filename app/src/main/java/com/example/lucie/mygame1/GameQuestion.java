@@ -31,7 +31,7 @@ public class GameQuestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gamequestion);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
+        Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
 
         otazka = findViewById(R.id.otazka);

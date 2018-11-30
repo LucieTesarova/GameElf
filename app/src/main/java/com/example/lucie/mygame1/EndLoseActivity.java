@@ -4,6 +4,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.widget.ImageView;
@@ -18,6 +23,8 @@ public class EndLoseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_lose);
+        Toolbar myToolbar = findViewById(R.id.appbar);
+        setSupportActionBar(myToolbar);
         imageView = findViewById(R.id.image_prohraljsi);
         player = MediaPlayer.create(getApplicationContext(), R.raw.lose);
         player.start();
@@ -53,4 +60,22 @@ public class EndLoseActivity extends AppCompatActivity {
                     .scaleYBy(1.0f);
         }
     };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_end, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        this.finishAffinity();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return true;
+    }
 }

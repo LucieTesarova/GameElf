@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     android:background="@color/colorgreen">
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appbar">
+    </include>
+
     <ImageView
         android:id="@+id/image_vyhraljsi"
         android:layout_width="200dp"

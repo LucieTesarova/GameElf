@@ -6,6 +6,11 @@
     tools:context=".MainActivity"
     android:background="@drawable/mydrawable">
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/appbar">
+    </include>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

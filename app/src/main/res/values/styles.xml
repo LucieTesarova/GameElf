@@ -15,4 +15,12 @@
         <item name="android:dropDownVerticalOffset">-10dp</item>
     </style>
 
+    <!-- DialogFragment theme. -->
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/coloryellow</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

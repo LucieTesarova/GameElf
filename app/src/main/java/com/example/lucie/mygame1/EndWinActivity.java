@@ -3,10 +3,14 @@ package com.example.lucie.mygame1;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.LinearInterpolator;
-import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,6 +29,8 @@ public class EndWinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_win);
+        Toolbar myToolbar = findViewById(R.id.appbar);
+        setSupportActionBar(myToolbar);
         player = MediaPlayer.create(getApplicationContext(), R.raw.tuudurt);
         player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -100,4 +106,22 @@ public class EndWinActivity extends AppCompatActivity {
                     .scaleYBy(1.0f);
         }
     };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_end, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        this.finishAffinity();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return true;
+    }
 }
