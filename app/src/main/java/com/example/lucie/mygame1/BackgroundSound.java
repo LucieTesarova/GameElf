@@ -38,8 +38,9 @@ public class BackgroundSound {
         if (player != null) {
             if (player.isPlaying()) {
                 player.stop();
-                player = null;
             }
+            player.release();
+            player = null;
         }
     }
 
