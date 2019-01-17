@@ -19,7 +19,8 @@
         android:layout_marginStart="10dp"
         android:text="@string/test"
         android:textColor="@color/coloryellow"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        style="@style/FontTheme"/>
 
     <ImageView
         android:id="@+id/image"

@@ -19,13 +19,13 @@ public class SoundDialogFragment extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialog);
 
-        builder.setMessage("Chces mit zapnutou hudbu?")
-                .setPositiveButton("ANO", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.hudba)
+                .setPositiveButton(R.string.ano, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         BackgroundSound.turnOnMusic();
                     }
                 })
-                .setNegativeButton("NE", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.ne, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                        BackgroundSound.turnOffMusic();
                     }

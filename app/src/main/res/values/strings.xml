@@ -1,17 +1,20 @@
 <resources>
-    <string name="app_name">Najdi spravnou cestu...</string>
-    <string name="vitejvehre">Vitej ve hre !</string>
-    <string name="buttonhra">Zacit hrat</string>
+    <string name="app_name">Najdi správnou cestu...</string>
+    <string name="vitejvehre">Vítej ve hře !</string>
+    <string name="buttonhra">Začít hrát</string>
     <string name="buttonkonec">Konec</string>
     <string name="buttonpokracuj">--></string>
     <string name="test">test</string>
     <string name="ne">Ne</string>
     <string name="ano">Ano</string>
     <string name="buttonpotvrdit">-></string>
-    <string name="buttonnastaveni">Nastaveni</string>
-    <string name="settings_name">Nastaveni</string>
+    <string name="buttonnastaveni">Nastavení</string>
+    <string name="settings_name">Nastavení</string>
     <string name="endgame_name">Konec hry</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="hudba">Chceš mit zapnutou hudbu?</string>
+    <!--<string name="ano">ANO</string>-->
+    <!--<string name="ne">NE</string>-->
 
     <!-- Strings related to Settings -->
 

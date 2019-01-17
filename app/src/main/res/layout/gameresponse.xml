@@ -26,7 +26,8 @@
             android:buttonTint="@color/coloryellow"
             android:textColor="@color/coloryellow"
             android:textSize="20sp"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            style="@style/FontTheme"/>
 
         <RadioButton
             android:id="@+id/radiobuttonne"
@@ -37,7 +38,8 @@
             android:buttonTint="@color/coloryellow"
             android:textColor="@color/coloryellow"
             android:textSize="20sp"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            style="@style/FontTheme"/>
     </RadioGroup>
 
     <ImageView
