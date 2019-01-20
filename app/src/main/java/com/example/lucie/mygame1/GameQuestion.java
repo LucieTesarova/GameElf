@@ -18,14 +18,15 @@ import android.widget.Toast;
  Trida GameQuestion
  Slouzi k zobrazeni otazky
  */
+
 public class GameQuestion extends AppCompatActivity {
 
     private TextView otazka;
     private Button pokracuj;
     private int id = 1;
-    static final int REQUEST = 1;
-    DataModel dm = new DataModel(this);
+    private static final int REQUEST = 1;
     private boolean continueMusic = true;
+    DataModel dm = new DataModel(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +35,11 @@ public class GameQuestion extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
 
-        otazka = findViewById(R.id.otazka);
-        pokracuj = findViewById(R.id.buttonPokracuj);
         Item item = dm.getItem(1);
+        pokracuj = findViewById(R.id.buttonPokracuj);
+        otazka = findViewById(R.id.otazka);
         otazka.setText(item.getHlavniText());
+
         Intent i = getIntent();
         if (i.hasExtra("id")){
             id = i.getIntExtra("id", 0);

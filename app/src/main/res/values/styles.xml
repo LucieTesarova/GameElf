@@ -8,7 +8,7 @@
     <!-- Toolbar theme. -->
     <style name="CustomToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/colorgreen</item>
-        <item name="android:fontFamily">@font/eaterregualr</item>
+        <item name="android:fontFamily">@font/emilyscenadyregular</item>
     </style>
 
     <!-- Menu item theme. -->
@@ -16,7 +16,7 @@
         <item name="android:background">@color/coloryellow</item>
         <item name="overlapAnchor">false</item>
         <item name="android:dropDownVerticalOffset">-10dp</item>
-        <item name="android:fontFamily">@font/eaterregualr</item>
+        <item name="android:fontFamily">@font/emilyscenadyregular</item>
     </style>
 
     <!-- DialogFragment theme. -->
@@ -24,13 +24,13 @@
         <item name="android:windowBackground">@color/coloryellow</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:fontFamily">@font/eaterregualr</item>
+        <item name="android:fontFamily">@font/emilyscenadyregular</item>
         <item name="android:gravity">center</item>
     </style>
 
      <!--Font style.xml -->
     <style name="FontTheme" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:fontFamily">@font/eaterregualr</item>
+        <item name="android:fontFamily">@font/emilyscenadyregular</item>
     </style>
 
 </resources>

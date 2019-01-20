@@ -35,10 +35,10 @@ public class EndWinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end_win);
         Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
+
         player = MediaPlayer.create(getApplicationContext(), R.raw.tuudurt);
         player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-        pruhlednost.run();
 
         imageVyhra = findViewById(R.id.image_vyhraljsi);
         hvezda1 = findViewById(R.id.hvezda1);
@@ -47,6 +47,7 @@ public class EndWinActivity extends AppCompatActivity {
         hvezda4 = findViewById(R.id.hvezda4);
         hvezda5 = findViewById(R.id.hvezda5);
         hvezda6 = findViewById(R.id.hvezda6);
+        pruhlednost.run();
     }
 
     Runnable pruhlednost = new Runnable() {

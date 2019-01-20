@@ -27,9 +27,10 @@ public class EndLoseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_lose);
+        imageView = findViewById(R.id.image_prohraljsi);
         Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
-        imageView = findViewById(R.id.image_prohraljsi);
+
         player = MediaPlayer.create(getApplicationContext(), R.raw.lose);
         player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);

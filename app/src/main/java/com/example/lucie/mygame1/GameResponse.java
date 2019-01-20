@@ -23,7 +23,6 @@ public class GameResponse extends AppCompatActivity {
 
     private RadioButton ano;
     private RadioButton ne;
-    private Button potvrdit;
     private int id;
     private Item item;
     private Intent returnIntent;
@@ -36,7 +35,7 @@ public class GameResponse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_response);
        // dm.deleteTable();
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.appbar);
+        Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
@@ -44,9 +43,8 @@ public class GameResponse extends AppCompatActivity {
 
         ano = findViewById(R.id.radiobuttonano);
         ne = findViewById(R.id.radiobuttonne);
-        potvrdit = findViewById(R.id.potvrdit);
-        odkaz = "0";
 
+        odkaz = "0";
         returnIntent = getIntent();
         id = returnIntent.getIntExtra("id", 0);
         item = dm.getItem(id);
