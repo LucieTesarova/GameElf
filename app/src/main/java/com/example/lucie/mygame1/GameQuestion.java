@@ -30,7 +30,7 @@ public class GameQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gamequestion);
+        setContentView(R.layout.game_question);
         Toolbar myToolbar = findViewById(R.id.appbar);
         setSupportActionBar(myToolbar);
 
@@ -43,7 +43,6 @@ public class GameQuestion extends AppCompatActivity {
             id = i.getIntExtra("id", 0);
             String newId = String.valueOf(id);
             setText(newId);
-            Toast.makeText(getApplicationContext(), "id doruceno", Toast.LENGTH_LONG).show();
         }
 
         pokracuj.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +64,7 @@ public class GameQuestion extends AppCompatActivity {
                 setText(result);
             }
             if (resultCode == Activity.RESULT_CANCELED) {
-                Toast.makeText(this, "chyba", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Chyba", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -89,6 +88,13 @@ public class GameQuestion extends AppCompatActivity {
         continueMusic = false;
         BackgroundSound.start();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BackgroundSound.turnOffMusic();
+    }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         int i = event.getKeyCode();

@@ -12,7 +12,11 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+/*
+ Trida EndWinActivity
+ Spousti animaci pro vyhre
+ */
 
 public class EndWinActivity extends AppCompatActivity {
 
@@ -34,6 +38,7 @@ public class EndWinActivity extends AppCompatActivity {
         player = MediaPlayer.create(getApplicationContext(), R.raw.tuudurt);
         player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        pruhlednost.run();
 
         imageVyhra = findViewById(R.id.image_vyhraljsi);
         hvezda1 = findViewById(R.id.hvezda1);
@@ -42,16 +47,6 @@ public class EndWinActivity extends AppCompatActivity {
         hvezda4 = findViewById(R.id.hvezda4);
         hvezda5 = findViewById(R.id.hvezda5);
         hvezda6 = findViewById(R.id.hvezda6);
-
-        Toast.makeText(getApplicationContext(), "Otevrena endWinActivity", Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            pruhlednost.run();
-        }
     }
 
     Runnable pruhlednost = new Runnable() {
@@ -107,6 +102,7 @@ public class EndWinActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -123,5 +119,16 @@ public class EndWinActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BackgroundSound.turnOffMusic();
+        if (player != null && player.isPlaying()){
+            player.stop();
+            player.release();
+            player = null;
+        }
     }
 }

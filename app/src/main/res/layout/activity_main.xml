@@ -20,7 +20,7 @@
         android:textColor="@color/colorgrey"
         android:textSize="40sp"
         android:textStyle="bold"
-       style="@style/FontTheme"
+        style="@style/FontTheme"
         />
 
     <Button

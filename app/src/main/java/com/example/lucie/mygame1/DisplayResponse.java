@@ -11,7 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+/*
+ Trida DisplayResponse
+ Slouzi k zobrazeni odpovedi
+ */
 
 public class DisplayResponse extends AppCompatActivity {
 
@@ -44,7 +48,6 @@ public class DisplayResponse extends AppCompatActivity {
         Intent intent = getIntent();
         odkaz = intent.getStringExtra("odkaz");
         id = intent.getIntExtra("id", 0);
-        //  Toast.makeText(getApplicationContext(), "id " + id, Toast.LENGTH_LONG).show();
         textView.setText(odkaz);
 
     }
@@ -62,20 +65,16 @@ public class DisplayResponse extends AppCompatActivity {
             case 12:
             case 17:
                 openEndLoseActivity();
-                Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
                 break;
             case 9:
             case 16:
                 openEndWinActivity();
-                Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
                 break;
             case 19:
                 if (odkaz.startsWith("s")) {
                     openEndLoseActivity();
-                    Toast.makeText(getApplicationContext(), "Prohral jsi", Toast.LENGTH_LONG).show();
                 } else {
                     openEndWinActivity();
-                    Toast.makeText(getApplicationContext(), "Vyhral jsi", Toast.LENGTH_LONG).show();
                 }
                 break;
             default:
@@ -116,6 +115,12 @@ public class DisplayResponse extends AppCompatActivity {
             continueMusic = false;
         }
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BackgroundSound.turnOffMusic();
     }
 
     @Override

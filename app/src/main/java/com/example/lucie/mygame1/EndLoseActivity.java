@@ -12,7 +12,11 @@ import android.view.MenuItem;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+/*
+ Trida EndLoseActivity
+ Spousti animaci pro prohre
+ */
 
 public class EndLoseActivity extends AppCompatActivity {
 
@@ -29,16 +33,7 @@ public class EndLoseActivity extends AppCompatActivity {
         player = MediaPlayer.create(getApplicationContext(), R.raw.lose);
         player.start();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-
-        Toast.makeText(getApplicationContext(), "Otevrena endLoseActivity", Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            rotace.run();
-        }
+        rotace.run();
     }
 
     Runnable rotace = new Runnable() {
@@ -56,8 +51,8 @@ public class EndLoseActivity extends AppCompatActivity {
         public void run() {
             imageView.animate().setDuration(1000)
                     .setInterpolator(new AnticipateInterpolator())
-                    .scaleXBy(1.0f)
-                    .scaleYBy(1.0f);
+                    .scaleXBy(0.8f)
+                    .scaleYBy(0.8f);
         }
     };
 
@@ -77,5 +72,16 @@ public class EndLoseActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BackgroundSound.turnOffMusic();
+        if (player != null && player.isPlaying()){
+            player.stop();
+            player.release();
+            player = null;
+        }
     }
 }

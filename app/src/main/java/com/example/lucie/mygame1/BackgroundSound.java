@@ -3,6 +3,11 @@ package com.example.lucie.mygame1;
 import android.content.Context;
 import android.media.MediaPlayer;
 
+/*
+ Trida BackgroundSound
+ Zajistuje prehravani hudby.
+ */
+
 public class BackgroundSound {
 
     private static MediaPlayer player;
@@ -24,7 +29,6 @@ public class BackgroundSound {
             }
         }
     }
-
 
     public static void pause() {
         if (player != null) {
